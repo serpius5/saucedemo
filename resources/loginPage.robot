@@ -12,7 +12,11 @@ ${STANDART_USER}    standard_user
 ${INVALID_USER}    invalid_user
 ${PASSWORD}    secret_sauce
 ${INVALID_PASWORD}    invalid_sauce
-
+${LOCKED_USER_ERROR}    Epic sadface: Sorry, this user has been locked out.
+${LOCKED_USER}    locked_out_user
+${PROBLEM_USER}    problem_user
+${PROBLEM_USER_PICTURE}    //img[@src="/static/media/sl-404.168b1cce.jpg"]
+${PERFORMANCE_GLITCH_USER}    performance_glitch_user
 
 *** Keywords ***
 open browser to login page
@@ -39,4 +43,5 @@ Close browser
 Error message should be displayed
     [Arguments]    ${ERROR TEXT}
     element text should be    ${ERROR LABEL}    ${ERROR TEXT}
+
 
