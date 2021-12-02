@@ -27,3 +27,22 @@ User can't login with invalid user password data
     input password    ${INVALID_PASWORD}
     submit credentials
     error message should be displayed    ${USERNAME PASSWORD MISMATCH ERROR}
+
+Login with locked out user
+    input username  ${LOCKED_OUT_USER}
+    input password  ${PASSWORD}
+    submit credentials
+    error message should be displayed    ${error_user_locked_out}
+
+User login with glitch performance
+    input username  ${PERFORMANCE_GLITCH_USER}
+    input password  ${PASSWORD}
+    submit credentials
+    Wait for the page with the products to load
+    welcome page should be open
+
+Login with the problem user
+    input username  ${problem_user}
+    input password  ${PASSWORD}
+    submit credentials
+    Page with not the appropriate image of the product should be open
