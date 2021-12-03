@@ -17,6 +17,7 @@ ${PERFORMANCE_GLITCH_USER}  performance_glitch_user
 ${PROBLEM_USER}     problem_user
 ${PASSWORD}    secret_sauce
 ${INVALID_PASWORD}    invalid_sauce
+${IMG_PROBLEM}  //img[@src="/static/media/sl-404.168b1cce.jpg"]
 
 
 *** Keywords ***
@@ -44,7 +45,7 @@ Wait for the page with the products to load
 
 Page with not the appropriate image of the product should be open
     title should be      Swag Labs
-    Page Should Contain Image    //img[@src="/static/media/sl-404.168b1cce.jpg"]
+    Page Should Contain Image    ${IMG_PROBLEM}
 
 Close browser
     close all browsers
