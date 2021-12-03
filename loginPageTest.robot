@@ -50,4 +50,4 @@ User logged in with performance failure
     input password    ${PASSWORD}
     submit credentials
     sleep    4
-    wait until page does not contain    PRODUCTS
+    wait until page contains    PRODUCTS
