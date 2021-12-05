@@ -8,10 +8,15 @@ ${ERROR LABEL}    css=h3[data-test="error"]
 ${EMPTY USERNAME FIELD ERROR}    Epic sadface: Username is required
 ${EMPTY PASSWORD FIELD ERROR}    Epic sadface: Password is required
 ${USERNAME PASSWORD MISMATCH ERROR}    Epic sadface: Username and password do not match any user in this service
+${LOCKED_OUT_USER_MESSAGE}    Epic sadface: Sorry, this user has been locked out.
 ${STANDART_USER}    standard_user
 ${INVALID_USER}    invalid_user
+${LOCKED_OUT_USER}    locked_out_user
+${PERFORMANCE_GLITCH_USER}    performance_glitch_user
+${PROBLEM_USER}    problem_user
 ${PASSWORD}    secret_sauce
 ${INVALID_PASWORD}    invalid_sauce
+${INAPPROPRIATE_IMAGES}    css = [src="/static/media/sl-404.168b1cce.jpg"]
 
 
 *** Keywords ***
@@ -39,4 +44,7 @@ Close browser
 Error message should be displayed
     [Arguments]    ${ERROR TEXT}
     element text should be    ${ERROR LABEL}    ${ERROR TEXT}
+
+Page with inappropriate products' images should be open
+    page should contain image    ${INAPPROPRIATE_IMAGES}
 
