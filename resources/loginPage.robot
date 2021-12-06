@@ -44,5 +44,5 @@ Error message should be displayed
     [Arguments]    ${ERROR TEXT}
     element text should be    ${ERROR LABEL}    ${ERROR TEXT}
 
-Item's image should be
+Сheck items has template images
     element attribute value should be   css=img.inventory_item_img  src    https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg

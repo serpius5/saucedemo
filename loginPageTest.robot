@@ -45,7 +45,7 @@ Problem User Login
     input password    ${PASSWORD}
     submit credentials
     welcome page should be open
-    item's image should be
+    Сheck items has template images
 
 Performance User Login
     [Tags]    7
