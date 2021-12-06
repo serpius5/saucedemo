@@ -47,10 +47,9 @@ Problem User Login
     welcome page should be open
     item's image should be
 
-
 Performance User Login
     [Tags]    7
     input username    ${PERFORMANCE_USER}
     input password    ${PASSWORD}
     submit credentials
-    welcome page should be open
+    wait until element contains    css=span.title  PRODUCTS    timeout=20
