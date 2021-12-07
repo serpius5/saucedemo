@@ -38,7 +38,7 @@ Login with problem user
     input username  ${problem_user}
     input password  ${PASSWORD}
     submit credentials
-    open page with problem image    ${IMG_PROBLEM}
+    open page with problem image
 
 Delay in authorization with perfomance glitch user
     input username  ${PERFOMANCE_GLITCH_USER}

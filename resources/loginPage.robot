@@ -16,8 +16,6 @@ ${LOCKED_USER}      locked_out_user
 ${LOCKED_USER_ERROR_MESSAGE}    Epic sadface: Sorry, this user has been locked out.
 ${PROBLEM_USER}     problem_user
 ${PERFOMANCE_GLITCH_USER}   performance_glitch_user
-${IMG_PROBLEM}        static/media/sl-404.168b1cce.jpg
-
 
 *** Keywords ***
 open browser to login page
@@ -44,4 +42,7 @@ Close browser
 Error message should be displayed
     [Arguments]    ${ERROR TEXT}
     element text should be    ${ERROR LABEL}    ${ERROR TEXT}
+
+open page with problem image
+    element attribute value should be   css=img.inventory_item_img  src    https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
 
