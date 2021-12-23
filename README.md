@@ -1,10 +1,6 @@
 # saucedemo
 1. Login
 2. Add item to cart
-add 1 item to card
-remove item from cart
-something else
-Pidopryhora http://link
 3. Sorting
   Sort items by name from Z to A
   Sort items by price from low to high
