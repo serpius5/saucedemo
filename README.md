@@ -1,6 +1,10 @@
 #### saucedemo
 ## 1. Login
 ## 2. Add item to cart
+- Add one item to cart from products list
+- Add one item to cart from product page
+- Add two items to cart from products list
+- Medvedieva https://docs.google.com/spreadsheets/d/1Wnfk57fuT5bgcDf1MKunAhZBeMMEbzf-_HoRGGVQaAw/edit?usp=sharing
 ## 3. Sorting
 - Sort items by name from Z to A
 - Sort items by price from low to high
