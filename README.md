@@ -10,6 +10,7 @@
 - Sort items by price from low to high
 - Sort items by price from high to low
 - Leshchenko https://docs.google.com/spreadsheets/d/1P7y5QcV3Jg2xms81lceW6ltqN7zBHsRL7DuGR9RDZI4/edit?usp=sharing
+- automation: Shelestynskyi Oleksandr
 ## 4. Checkout page
 - Checkout with valid data
 - Checkout with the empty shopping cart
