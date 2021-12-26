@@ -21,4 +21,5 @@
 - Test that the button "Logout" on the side menu signed out user from the system
 - Test that the button "About" on the side menu in problem user redirects to the page with error message
 - Shelestynskyi: https://docs.google.com/spreadsheets/d/1rEAZwWnyJipEgaDbthBmlt3ZLmsTVc0KeIPNyeibdIY/edit?usp=sharing 
+- automation: Petruk Inna
 ## 6. Social links
