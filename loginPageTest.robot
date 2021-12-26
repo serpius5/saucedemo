@@ -1,47 +1,38 @@
 *** Settings ***
 Documentation   Simple example
 Resource    resources/loginPage.robot
-Test Setup        open browser to login page
+Test Setup        The user is logged in
 Test Teardown     close browser
 
 
 *** Test Cases ***
+Checkout with valid data
+    [Tags]    1
+    the item "Sauce Labs Backpack" is added to the cart
+    open the cart
+    click the "Checkout" button
+    input first name    ${STANDART_FIRST_NAME}
+    input last name     ${USER_LAST_NAME}
+    input postal code       ${POST_CODE}
+    click the "Continue" button
+    click the "Finish" button
+    the successful message is shown on the "CHECKOUT: COMPLETE!" page
 
-Valid Login
-    input username    ${STANDART_USER}
-    input password    ${PASSWORD}
-    submit credentials
+Checkout with the empty shopping cart
+    [Tags]    2
+    open the cart
+    click the "Checkout" button
+    error message should be displayed    ${EMPTY_CART_ERROR}
+
+Go back to shopping from the "CHECKOUT: OVERVIEW" page
+    [Tags]    3
+    the item "Sauce Labs Backpack" is added to the cart
+    open the cart
+    click the "Checkout" button
+    input first name    ${STANDART_FIRST_NAME}
+    input last name     ${USER_LAST_NAME}
+    input postal code       ${POST_CODE}
+    click the "Continue" button
+    click the "Cancel" button
     welcome page should be open
 
-User can't login with empty fields
-    submit credentials
-    error message should be displayed    ${EMPTY USERNAME FIELD ERROR}
-
-User can't login with empty password field
-    input username    ${STANDART_USER}
-    submit credentials
-    error message should be displayed    ${EMPTY PASSWORD FIELD ERROR}
-
-User can't login with invalid user password data
-    input username    ${STANDART_USER}
-    input password    ${INVALID_PASWORD}
-    submit credentials
-    error message should be displayed    ${USERNAME PASSWORD MISMATCH ERROR}
-
-Locked out user login
-    input username    ${LOCKED_OUT_USER}
-    input password    ${PASSWORD}
-    submit credentials
-    error message should be displayed    ${LOCKED_OUT_USER_MESSAGE}
-
-Login with perfomance glitch user
-    input username    ${PERFORMANCE_GLITCH_USER}
-    input password    ${PASSWORD}
-    submit credentials
-    welcome page should be open
-
-Login with problem user
-    input username    ${PROBLEM_USER}
-    input password    ${PASSWORD}
-    submit credentials
-    page with inappropriate products' images should be open

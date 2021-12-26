@@ -1,28 +1,57 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library     SeleniumLibrary
 
 *** Variables ***
-${LOGIN URL}    https://www.saucedemo.com/
+${LOGIN_URL}    https://www.saucedemo.com/
+${CART_URL}     https://www.saucedemo.com/cart.html
 ${BROWSER}  Chrome
+${STANDART_USER}    standard_user
+${PASSWORD}    secret_sauce
+${EMPTY_CART_ERROR}     Epic sadface: Your Cart is Empty
+${STANDART_FIRST_NAME}      Standard
+${USER_LAST_NAME}       User
+${POST_CODE}    29000
 ${ERROR LABEL}    css=h3[data-test="error"]
 ${EMPTY USERNAME FIELD ERROR}    Epic sadface: Username is required
-${EMPTY PASSWORD FIELD ERROR}    Epic sadface: Password is required
-${USERNAME PASSWORD MISMATCH ERROR}    Epic sadface: Username and password do not match any user in this service
-${LOCKED_OUT_USER_MESSAGE}    Epic sadface: Sorry, this user has been locked out.
-${STANDART_USER}    standard_user
-${INVALID_USER}    invalid_user
-${LOCKED_OUT_USER}    locked_out_user
-${PERFORMANCE_GLITCH_USER}    performance_glitch_user
-${PROBLEM_USER}    problem_user
-${PASSWORD}    secret_sauce
-${INVALID_PASWORD}    invalid_sauce
-${INAPPROPRIATE_IMAGES}    css = [src="/static/media/sl-404.168b1cce.jpg"]
-
 
 *** Keywords ***
-open browser to login page
-    open browser    ${LOGIN URL}    ${BROWSER}
-    title should be      Swag Labs
+The user is logged in
+    open browser    ${LOGIN_URL}    ${BROWSER}
+    input username    ${STANDART_USER}
+    input password    ${PASSWORD}
+    submit credentials
+    welcome page should be open
+
+the item "Sauce Labs Backpack" is added to the cart
+    click button    css=[data-test="add-to-cart-sauce-labs-backpack"]
+
+open the cart
+    go to    ${CART_URL}
+
+click the "Checkout" button
+    click button    css=[data-test="checkout"]
+
+input first name
+    [Arguments]    ${FIRST_NAME}
+    input text    firstName    ${FIRST_NAME}
+input last name
+    [Arguments]    ${LAST_NAME}
+    input text    lastName    ${LAST_NAME}
+input postal code
+    [Arguments]    ${POSTAL_CODE}
+    input text    postalCode    ${POSTAL_CODE}
+
+click the "Continue" button
+    click button    continue
+
+click the "Finish" button
+    click button    finish
+
+click the "Cancel" button
+    click button    cancel
+
+the successful message is shown on the "CHECKOUT: COMPLETE!" page
+    page should contain    THANK YOU FOR YOUR ORDER
 
 input username
     [Arguments]    ${USER_NAME}
@@ -45,6 +74,5 @@ Error message should be displayed
     [Arguments]    ${ERROR TEXT}
     element text should be    ${ERROR LABEL}    ${ERROR TEXT}
 
-Page with inappropriate products' images should be open
-    page should contain image    ${INAPPROPRIATE_IMAGES}
+
 
