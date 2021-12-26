@@ -16,6 +16,7 @@
 - Checkout with the empty shopping cart
 - Go back to shopping from the "CHECKOUT: OVERVIEW" page
 - Petruk https://docs.google.com/spreadsheets/d/1zARQj7EmzSu7mVwPM1fDXAkPziblOn3uYWTEilecKno/edit?usp=sharing
+- automation: Medvedieva Viktoria
 ## 5. Side menu
 - Test that the "About" button on the side menu redirects to the official page "Sauce Labs" 
 - Test that the button "Logout" on the side menu signed out user from the system
