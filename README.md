@@ -5,7 +5,7 @@
 - Add one item to cart from product page
 - Add two items to cart from products list
 - Medvedieva https://docs.google.com/spreadsheets/d/1Wnfk57fuT5bgcDf1MKunAhZBeMMEbzf-_HoRGGVQaAw/edit?usp=sharing
-- automation Siryk Denis
+- automation: Siryk Denis
 ## 3. Sorting
 - Sort items by name from Z to A
 - Sort items by price from low to high
