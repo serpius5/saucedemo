@@ -29,3 +29,4 @@
 - Test Facebook link
 - Test Linkedin link
 - Syryk [saucedemo social links test](https://docs.google.com/spreadsheets/d/1pXq9PGoVr1-u-g-U5LwXJ6bIE6w6hH0QGfWE2adZpao/edit?usp=sharing).
+- automation: Chaikovskyi
