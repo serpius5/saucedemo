@@ -4,24 +4,16 @@ Library    SeleniumLibrary
 *** Variables ***
 ${LOGIN URL}    https://www.saucedemo.com/
 ${BROWSER}  Chrome
-${ERROR LABEL}    css=h3[data-test="error"]
-${EMPTY USERNAME FIELD ERROR}    Epic sadface: Username is required
-${EMPTY PASSWORD FIELD ERROR}    Epic sadface: Password is required
-${USERNAME PASSWORD MISMATCH ERROR}    Epic sadface: Username and password do not match any user in this service
 ${STANDART_USER}    standard_user
-${INVALID_USER}    invalid_user
 ${PASSWORD}    secret_sauce
-${INVALID_PASWORD}    invalid_sauce
-${LOCKED_USER_ERROR}    Epic sadface: Sorry, this user has been locked out.
-${LOCKED_USER}    locked_out_user
-${PROBLEM_USER}    problem_user
-${PROBLEM_USER_PICTURE}    //img[@src="/static/media/sl-404.168b1cce.jpg"]
-${PERFORMANCE_GLITCH_USER}    performance_glitch_user
+${TWITTER_URL}    https://twitter.com/saucelabs
+${FACEBOOK_URL}    https://www.facebook.com/saucelabs
+${LINKEDIN_URL}    https://www.linkedin.com/company/sauce-labs/
 
 *** Keywords ***
 open browser to login page
     open browser    ${LOGIN URL}    ${BROWSER}
-    title should be      Swag Labs
+
 
 input username
     [Arguments]    ${USER_NAME}
@@ -40,8 +32,13 @@ Welcome page should be open
 Close browser
     close all browsers
 
-Error message should be displayed
-    [Arguments]    ${ERROR TEXT}
-    element text should be    ${ERROR LABEL}    ${ERROR TEXT}
+Click Twitter button
+    click link    ${TWITTER_URL}
+
+Click Facebook button
+    click link    ${FACEBOOK_URL}
+
+Click Linkedin Button
+     click link    ${LINKEDIN_URL}
 
 
