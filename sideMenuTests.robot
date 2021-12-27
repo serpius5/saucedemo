@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    HW_saucedemo
 Resource    resources/sideMenuTestData.robot
+Resource    resources/loginPage.robot
 Test Setup    open browser to login page
 Test Teardown    close browser
 
@@ -8,8 +9,8 @@ Test Teardown    close browser
 *** Test Cases ***
 Check if the "About" button redirects to the official page
     [Tags]    SideMenu
-    input username    ${STANDARD_LOGIN}
-    input password
+    input username    ${STANDART_USER}
+    input password    ${PASSWORD}
     submit credentials
     inventory page should be opened
     click the left hamburger menu icon
@@ -19,8 +20,8 @@ Check if the "About" button redirects to the official page
 
 Check if the button "Logout" signs out user
     [Tags]    SideMenu
-    input username    ${STANDARD_LOGIN}
-    input password
+    input username    ${STANDART_USER}
+    input password    ${PASSWORD}
     submit credentials
     inventory page should be opened
     click the left hamburger menu icon
@@ -31,8 +32,8 @@ Check if the button "Logout" signs out user
 
 Check if the "About" button redirects to the page with the error message
     [Tags]    SideMenu
-    input username    ${PROBLEM_LOGIN}
-    input password
+    input username    ${PROBLEM_USER}
+    input password    ${PASSWORD}
     submit credentials
     inventory page should be opened
     click the left hamburger menu icon

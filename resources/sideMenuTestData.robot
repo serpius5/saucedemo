@@ -1,30 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    resources/loginPage.robot
 
 *** Variables ***
-${LOGIN_URL}    https://www.saucedemo.com/
-${BROWSER}  Chrome
-${STANDARD_LOGIN}    standard_user
-${PROBLEM_LOGIN}    problem_user
-${PASSWORD}    secret_sauce
 ${ABOUT_LINK}    xpath://a[text()='About']
 ${LOGOUT_LINK}    xpath://a[text()='Logout']
 
 *** Keywords ***
-open browser to login page
-    open browser    ${LOGIN_URL}    ${BROWSER}
-    title should be    Swag Labs
-
-input username
-    [Arguments]    ${USER_NAME}
-    input text    user-name    ${USER_NAME}
-
-input password
-    input text  password    ${PASSWORD}
-
-submit credentials
-    click button    login-button
-
 inventory page should be opened
     title should be    Swag Labs
 
