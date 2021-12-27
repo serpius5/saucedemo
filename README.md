@@ -13,6 +13,7 @@ ______
 - adding  items to cart after sorting items  by name(Z to A)
 - re-adding the same product to the cart after removing it
 - Chaikovskyi  https://docs.google.com/spreadsheets/d/1NzJ0KWiwFxkUnXHum1kWfik8oLiJcFk6E1ORlwqQb98/edit?usp=sharing
+- automation:Leshchenko
 
 ## 3. Sorting
 - Sort items by name from Z to A
