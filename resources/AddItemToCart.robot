@@ -1,12 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    ../resources/loginPage.robot
 
 *** Variables ***
-${LOGIN URL}    https://www.saucedemo.com/
 ${CART_URL}     https://www.saucedemo.com/cart.html
-${BROWSER}  Chrome
-${STANDART_USER}    standard_user
-${PASSWORD}    secret_sauce
 ${SELECT_CONTAINER}    css=[data-test="product_sort_container"]
 ${SORT_Z_A}      za
 ${SORT_LOW_HIDH}    lohi
@@ -28,20 +25,6 @@ The user is logged in and open to inventory page
     input password    ${PASSWORD}
     submit credentials
     title should be      Swag Labs
-
-input username
-    [Arguments]    ${USER_NAME}
-    input text    user-name    ${USER_NAME}
-
-input password
-    [Arguments]    ${USER_PASS}
-    input text    password      ${USER_PASS}
-
-Submit Credentials
-    click button    login-button
-
-Close browser
-    close all browsers
 
 sorting items
     [Arguments]    ${SORT_BY}
