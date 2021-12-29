@@ -1,3 +1,6 @@
 .idea
 Logs
 
+/output.xml
+/log.html
+/report.html
