@@ -23,7 +23,7 @@ ______
 - automation: Shelestynskyi Oleksandr
 ## 4. Checkout page
 - Checkout with valid data
-- Checkout with the empty shopping cart
+- Checkout with empty the "Last Name" field in the "CHECKOUT: YOUR INFORMATION" form
 - Go back to shopping from the "CHECKOUT: OVERVIEW" page
 - Petruk https://docs.google.com/spreadsheets/d/1zARQj7EmzSu7mVwPM1fDXAkPziblOn3uYWTEilecKno/edit?usp=sharing
 - automation: Medvedieva Viktoria
