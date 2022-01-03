@@ -7,7 +7,6 @@ ${CART_URL}     https://www.saucedemo.com/cart.html
 ${USER_FIRST_NAME}      Standart
 ${USER_LAST_NAME}       User
 ${POSTAL_CODE}      29000
-${EMPTY_CART_ERROR}     Epic sadface: Your cart is empty
 
 *** Keywords ***
 user is logged in
@@ -53,3 +52,6 @@ click "Cancel" button
 
 products page should be shown
     title should be    Swag Labs
+
+message "Error: Last Name is required" is shown
+    page should contain     Error: Last Name is required
