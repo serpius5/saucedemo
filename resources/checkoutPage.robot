@@ -35,7 +35,7 @@ input postal code
 click "Checkout" button
     click button    css=[data-test="checkout"]
 
-item "Sauce Labs Backpack" is added to the cart
+add item "Sauce Labs Backpack" to the cart
     click button    css=[data-test="add-to-cart-sauce-labs-backpack"]
 
 click "Continue" button

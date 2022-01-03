@@ -7,7 +7,7 @@ Test Teardown     close browser
 
 *** Test Cases ***
 Checkout with valid data
-    item "Sauce Labs Backpack" is added to the cart
+    add item "Sauce Labs Backpack" to the cart
     open cart
     click "Checkout" button
     input first name        ${USER_FIRST_NAME}
@@ -17,8 +17,8 @@ Checkout with valid data
     click "Finish" button
     successful message is shown on the "CHECKOUT: COMPLETE!" page
 
-Checkout with empty the "Last Name" field in the "CHECKOUT: YOUR INFORMATION" form
-    item "Sauce Labs Backpack" is added to the cart
+Checkout with empty "Last Name" field in the "CHECKOUT: YOUR INFORMATION" form
+    add item "Sauce Labs Backpack" to the cart
     open cart
     click "Checkout" button
     input first name        ${USER_FIRST_NAME}
@@ -28,7 +28,7 @@ Checkout with empty the "Last Name" field in the "CHECKOUT: YOUR INFORMATION" fo
 
 
 Go back to shopping from the "CHECKOUT: OVERVIEW" page
-    item "Sauce Labs Backpack" is added to the cart
+    add item "Sauce Labs Backpack" to the cart
     open cart
     click "Checkout" button
     input first name        ${USER_FIRST_NAME}
