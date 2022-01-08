@@ -1,11 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource   loginPage.robot
 
 *** Variables ***
-${LOGIN URL}    https://www.saucedemo.com/
-${BROWSER}  Chrome
-${STANDART_USER}    standard_user
-${PASSWORD}    secret_sauce
 ${ADD_TO_CART_ONSIE}    css=button[id="add-to-cart-sauce-labs-onesie"]
 ${SHOPPING_CART_BEDGE}  css=span[class="shopping_cart_badge"]
 ${SHOPPING_CART}    css=a[class="shopping_cart_link"]
@@ -30,16 +27,4 @@ Open browser to inventory page
     submit credentials
     title should be    Swag Labs
 
-input username
-    [Arguments]    ${USER_NAME}
-    input text    user-name    ${USER_NAME}
 
-input password
-    [Arguments]    ${USER_PASS}
-    input text    password      ${USER_PASS}
-
-Submit Credentials
-    click button    login-button
-
-Close browser
-    close all browsers

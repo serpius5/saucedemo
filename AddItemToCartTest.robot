@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation   Simple example
 Resource    resources/Add_item_to_cart.robot
+Resource    resources/loginPage.robot
 Test Setup    open browser to inventory page
 Test Teardown    close browser
 
