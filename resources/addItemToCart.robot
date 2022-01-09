@@ -12,7 +12,6 @@ ${CART_LIST}   css=div[class="cart_list"]
 ${ONESIE}   Sauce Labs Onesie
 ${ADD_ONESIE}    add-to-cart-sauce-labs-onesie
 ${REMOVE_ONESIE}    remove-sauce-labs-onesie
-${JACKET}   Sauce Labs Fleece Jacket
 ${ADD_JACKET}   add-to-cart-sauce-labs-fleece-jacket
 ${TSHIRT}       Sauce Labs Bolt T-Shirt
 ${ADD_THSIRT}   add-to-cart-sauce-labs-bolt-t-shirt

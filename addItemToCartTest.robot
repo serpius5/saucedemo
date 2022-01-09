@@ -2,7 +2,7 @@
 Documentation   Simple example
 Resource    resources/addItemToCart.robot
 Resource    resources/loginPage.robot
-Test Setup    The user is logged in and open to inventory page
+Test Setup    Open browser to inventory page
 Test Teardown   Close browser
 
 
