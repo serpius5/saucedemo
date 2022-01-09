@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    resources/loginPage.robot
 
 *** Variables ***
 ${ABOUT_LINK}    xpath://a[text()='About']
@@ -28,12 +27,12 @@ check if the user is logged out
 check if the page containe error message
     title should be    Error 404 | Sauce Labs
 
-wait until page contains ABOUT link
-    wait until page contains element    ${ABOUT_LINK}
-
-wait until page contains LOGOUT link
-    wait until page contains element    ${LOGOUT_LINK}
-
 wait until page contains LOGIN button
     wait until page contains element    login-button
+
+wait until ABOUT link is visible
+    wait until element is visible    ${ABOUT_LINK}
+
+wait until LOGOUT link is visible
+    wait until element is visible    ${LOGOUT_LINK}
 

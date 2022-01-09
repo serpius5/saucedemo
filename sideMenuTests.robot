@@ -14,7 +14,7 @@ Check if the "About" button redirects to the official page
     submit credentials
     inventory page should be opened
     click the left hamburger menu icon
-    wait until page contains ABOUT link
+    wait until ABOUT link is visible
     click the ABOUT link
     check if the official page opened
 
@@ -25,19 +25,18 @@ Check if the button "Logout" signs out user
     submit credentials
     inventory page should be opened
     click the left hamburger menu icon
-    wait until page contains LOGOUT link
+    wait until LOGOUT link is visible
     click the LOGOUT link
     wait until page contains LOGIN button
-    check if the user is logged out
 
-Check if the "About" button redirects to the page with the error message
+Check if the "About" button in problem user redirects to the page with the error message
     [Tags]    SideMenu
     input username    ${PROBLEM_USER}
     input password    ${PASSWORD}
     submit credentials
     inventory page should be opened
     click the left hamburger menu icon
-    wait until page contains ABOUT link
+    wait until ABOUT link is visible
     click the ABOUT link
     check if the page containe error message
 
